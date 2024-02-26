@@ -31,6 +31,10 @@ public class LoginSteps {
     public void enter_valid_email_wrong_password(DataTable table){
         new LoginPage(driver).enterWrongData(table);
     }
+    @And("User clicks OK button")
+    public void click_OK_button() {
+        new LoginPage(driver).clickOnOkButton();
+    }
 
     @Then("User verifies Error message is displayed")
     public void verify_Error_message(){

@@ -52,4 +52,11 @@ public class LoginPage extends BasePage{
         assert isElementDisplayed(error);
         return this;
     }
+
+    @FindBy(xpath = "//button[contains(text(),'Ok')]")
+    WebElement okButton;
+    public LoginPage clickOnOkButton() {
+        click(okButton);
+        return this;
+    }
 }
